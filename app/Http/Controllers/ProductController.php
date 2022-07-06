@@ -36,11 +36,11 @@ class ProductController extends Controller
             ]
         ]);
 
-     $qrcodes =  json_decode((string) $res->getBody(), true);
+     $qrcode =  json_decode((string) $res->getBody(), true);
 
      
 
-     return view('products.index')->with('qrcodes', $qrcodes);
+     return view('products.show')->with('qrcode', $qrcode['data']);
 
 
     }
